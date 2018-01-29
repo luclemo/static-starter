@@ -1,0 +1,18 @@
+/*
+To hide content from screen-readers, but keep them accessible to
+sighted users (ex: decorative icons)use the `aria-hidden="true"` attribute
+*/
+
+/* Text meant only for screen readers. */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}

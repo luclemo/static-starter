@@ -1,0 +1,50 @@
+// --------------------------------
+// Breakpoints
+// --------------------------------
+@mixin breakpoint($point) {
+  @if $point == minjumbo {
+    @media (min-width: 92.5em) {
+      @content;
+    } // 1480px and up
+  } @else if $point == mindesktop {
+    @media (min-width: 81.25em) {
+      @content;
+    } // 1300px and up
+  } @else if $point == desktop {
+    @media (max-width: 81.25em) {
+      @content;
+    } // 1300px and down
+  } @else if $point == minlaptop {
+    @media (min-width: 64em) {
+      @content;
+    } // 1024px and up
+  } @else if $point == laptop {
+    @media (max-width: 64em) {
+      @content;
+    } // 1024px and down
+  } @else if $point == mintablet {
+    @media (min-width: 50em) {
+      @content;
+    } // 800px and up
+  } @else if $point == tablet {
+    @media (max-width: 50em) {
+      @content;
+    } // 800px and down
+  } @else if $point == minphablet {
+    @media (min-width: 37.5em) {
+      @content;
+    } // 600px and up
+  } @else if $point == phablet {
+    @media (max-width: 37.5em) {
+      @content;
+    } // 600px and down
+  } @else if $point == mobileonly {
+    @media (max-width: 27em) {
+      @content;
+    } // 432px and down
+  } @else if $point == tiny {
+    @media (max-width: 20em) {
+      @content;
+    } // 320px and down
+  }
+}
