@@ -9,7 +9,7 @@ Just a directory with some good starter bits:
 ### Basic file structure 📂
 
 ```
-static-starter/
+source/
 |   + index.html
 |__ css
 |   |__ base/
